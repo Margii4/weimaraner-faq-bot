@@ -100,16 +100,6 @@ Built to answer user questions about the Weimaraner dog breed with reliable, fac
 
 ---
 
-**Example environment file (`.env`):**
-```env
-TELEGRAM_BOT_TOKEN=123456789:AAEXAMPLE-YOUR-BOT-TOKEN
-OPENAI_API_KEY=sk-xxx
-PINECONE_API_KEY=example-pinecone-key
-PINECONE_INDEX=weimaraner-faq
-
----
-
-
 On first run, the FAQ will be split, indexed, and uploaded to Pinecone.
 
 Bot will start polling for messages in Telegram.
@@ -137,8 +127,7 @@ English system prompt:
 Italian system prompt:
 “Sei un esperto cinofilo madrelingua italiano. Rispondi SOLO in italiano naturale, corretto e professionale, evitando calchi o traduzioni letterali da altre lingue. Se non sai la risposta dal contesto, scrivi semplicemente che non lo sai.”
 
-   📚 License
-(LICENSE)
+   
 
 
 
