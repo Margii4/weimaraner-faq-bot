@@ -36,46 +36,76 @@ Built to answer user questions about the Weimaraner dog breed with reliable, fac
 - 📦 requirements.txt — Easy dependency management.
 
 
----
-
- ## 🚀 Getting Started
+# 🚀 Getting Started
 
 1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/weimaraner-faq-bot.git
-   cd weimaraner-faq-bot
+    ```bash
+    git clone https://github.com/yourusername/weimaraner-faq-bot.git
+    cd weimaraner-faq-bot
+    ```
+    _Clones the repository and enters the project folder._
 
 2. **Create and activate a virtual environment**
-  python -m venv venv
-# For Windows:
-venv\Scripts\activate
-# For Linux/macOS:
-source venv/bin/activate
-
----
+    ```bash
+    python -m venv venv
+    ```
+    - **For Windows:**
+      ```bash
+      venv\Scripts\activate
+      ```
+    - **For Linux/macOS:**
+      ```bash
+      source venv/bin/activate
+      ```
+    _Creates and activates an isolated Python environment._
 
 3. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-
----
+    ```bash
+    pip install -r requirements.txt
+    ```
+    _Installs all required dependencies from requirements.txt._
 
 4. **Set up environment variables**
-   ```bash
-   TELEGRAM_BOT_TOKEN=your-telegram-token
-   OPENAI_API_KEY=your-openai-key
-   PINECONE_API_KEY=your-pinecone-key
-   PINECONE_INDEX=your-index-name
-
----
+    - Create a `.env` file in the project root with the following content:
+      ```env
+      TELEGRAM_BOT_TOKEN=your-telegram-token          # Your Telegram bot token
+      OPENAI_API_KEY=your-openai-key                  # Your OpenAI API key
+      PINECONE_API_KEY=your-pinecone-key              # Your Pinecone API key
+      PINECONE_INDEX=your-index-name                  # Your Pinecone index name
+      ```
+    _This sets all necessary environment variables._
 
 5. **Add your FAQ document**
-Put your (English) FAQ as data/weimaraner_faq.docx.
+    - Place your (English) FAQ as:
+      ```
+      data/weimaraner_faq.docx
+      ```
+    _This document will be processed and indexed._
+
+6. **Run the bot**
+    ```bash
+    python bot.py
+    ```
+    - On the first run, the FAQ will be split, indexed, and uploaded to Pinecone.
+    - The bot will start polling for messages in Telegram.
 
 ---
 
-6. **Run the bot**
-python bot.py
+### 📝 Usage
+
+- Open Telegram and find your bot.
+- Use the `/start` command to begin.
+- Ask questions in English or Italian about Weimaraners.
+- Use keyboard buttons to switch language, view recent questions ("Resents"), or clear chat history ("Clear memory").
+
+---
+
+**Example environment file (`.env`):**
+```env
+TELEGRAM_BOT_TOKEN=123456789:AAEXAMPLE-YOUR-BOT-TOKEN
+OPENAI_API_KEY=sk-xxx
+PINECONE_API_KEY=example-pinecone-key
+PINECONE_INDEX=weimaraner-faq
 
 ---
 
