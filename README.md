@@ -142,10 +142,3 @@ Italian system prompt:
 ## License
 
 MIT
-
----
-
-🚀 Author
-Margarita Viviers
-
-
