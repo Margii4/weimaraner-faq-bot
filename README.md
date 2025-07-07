@@ -44,9 +44,9 @@ Built to answer user questions about the Weimaraner dog breed with reliable, fac
 ```bash
 git clone https://github.com/yourusername/weimaraner-faq-bot.git
 cd weimaraner-faq-bot
-
-2. 🐢 Create and activate virtual environment
 ```
+2. 🐢 Create and activate virtual environment
+
 python -m venv venv
 # Windows:
 venv\Scripts\activate
