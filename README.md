@@ -28,19 +28,11 @@ Built to answer user questions about the Weimaraner dog breed with reliable, fac
 
 ---
 
-## 📸 Screenshots
+ 📸 **Screenshots**
 
-### Main Menu
-![Telegram bot main menu](main_menu.png)
-
-### Example Q&A (English)
-![Q&A in English](qa_english.png)
-
-### Example Q&A (Italian)
-![Q&A in Italian](qa_italian.png)
-
-### User Query History (“Resents”)
-![Recent questions history](resents_history.png)
+| Main menu | QA English | QA Italian | Resents History |
+|---|---|---|---|
+| ![main](main_menu.png) | ![qa_english](qa_english.png) | ![qa_italian](qa_italian.png) | ![resents](resents_history.png) | g)
 
 
 ---
