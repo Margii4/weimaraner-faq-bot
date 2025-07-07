@@ -4,3 +4,4 @@ __pycache__/
 *.pyc
 user_history.json
 vector_db.ok
+bot.log
