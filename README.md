@@ -98,8 +98,6 @@ Built to answer user questions about the Weimaraner dog breed with reliable, fac
 - Ask questions in English or Italian about Weimaraners.
 - Use keyboard buttons to switch language, view recent questions ("Resents"), or clear chat history ("Clear memory").
 
----
-
 On first run, the FAQ will be split, indexed, and uploaded to Pinecone.
 
 Bot will start polling for messages in Telegram.
