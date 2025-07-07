@@ -28,6 +28,23 @@ Built to answer user questions about the Weimaraner dog breed with reliable, fac
 
 ---
 
+## 📸 Screenshots
+
+### Main Menu
+![Telegram bot main menu](main_menu.png)
+
+### Example Q&A (English)
+![Q&A in English](qa_english.png)
+
+### Example Q&A (Italian)
+![Q&A in Italian](italian.png)
+
+### User Query History (“Resents”)
+![Recent questions history](resents_history.png)
+
+
+---
+
    🛠️ Technologies Used
 
 -🐍 Python 3.10+ — Core programming language.
