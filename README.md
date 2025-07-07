@@ -112,24 +112,6 @@ Bot will start polling for messages in Telegram.
 
 ---
 
-📱 Usage
-
-📲 Open Telegram and find your bot.
-
-🚀 Use /start to begin.
-
-❓ Ask questions in English or Italian about Weimaraners.
-
-🗂️ Use keyboard buttons to switch language, show your recent question history, or clear your memory.
-
-📝 Example questions:
-
-"What are the main characteristics of the Weimaraner breed?"
-
-"Quali sono i problemi di salute comuni nei Weimaraner?"
-
----
-
 ⚡ Example Prompt Engineering (EN/IT)
 English system prompt:
 “You are a native English canine expert. Answer ONLY in natural, correct, literary English. Never translate phrases literally from other languages. If you don't know the answer from context, just say you don't know.”
