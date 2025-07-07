@@ -1,5 +1,12 @@
  🐶 AI FAQ Telegram Bot for the Weimaraner Breed
 
+ The bot is available while my script is running. If you cannot get a response, please contact me to schedule a demo.
+
+e-mail:margaritaviviers@gmail.com
+Telegram: [@margii4](https://t.me/margii4)
+
+Try the bot directly in Telegram: [@weim_faq_bot](https://t.me/weim_faq_bot)
+
 A multilingual, context-aware FAQ Telegram bot powered by Retrieval Augmented Generation (RAG), OpenAI LLM, and semantic search.  
 Built to answer user questions about the Weimaraner dog breed with reliable, factual information from your custom FAQ knowledge base.
 
@@ -135,9 +142,7 @@ Italian system prompt:
 
 MIT
 
-   
-
-
+---
 
 🚀 Author
 Margarita Viviers
