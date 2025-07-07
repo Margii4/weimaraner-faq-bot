@@ -46,30 +46,26 @@ Built to answer user questions about the Weimaraner dog breed with reliable, fac
    cd weimaraner-faq-bot
 
 2. **Create and activate a virtual environment**
-   ```bash
-python -m venv venv
+  python -m venv venv
 # For Windows:
 venv\Scripts\activate
 # For Linux/macOS:
 source venv/bin/activate
 
 3. **Install dependencies**
-   ```bash
-pip install -r requirements.txt
+  pip install -r requirements.txt
 
 4. **Set up environment variables**
-    ```bash
 TELEGRAM_BOT_TOKEN=your-telegram-token
 OPENAI_API_KEY=your-openai-key
 PINECONE_API_KEY=your-pinecone-key
 PINECONE_INDEX=your-index-name
 
+
 5. **Add your FAQ document**
-      ```bash
 Put your (English) FAQ as data/weimaraner_faq.docx.
 
 6. **Run the bot**
-     ```bash
 python bot.py
 
 On first run, the FAQ will be split, indexed, and uploaded to Pinecone.
