@@ -45,8 +45,8 @@ Built to answer user questions about the Weimaraner dog breed with reliable, fac
 git clone https://github.com/yourusername/weimaraner-faq-bot.git
 cd weimaraner-faq-bot
 
-🐢 Create and activate virtual environment
-
+2. 🐢 Create and activate virtual environment
+```bash
 python -m venv venv
 # Windows:
 venv\Scripts\activate
@@ -54,10 +54,11 @@ venv\Scripts\activate
 source venv/bin/activate
 
 3. 📦 Install dependencies
-
+```bash
 pip install -r requirements.txt
 
 4. 🗝️ Prepare your environment variables
+```bash
 Create a .env file in the project root:
 
 TELEGRAM_BOT_TOKEN=your-telegram-token
@@ -66,11 +67,13 @@ PINECONE_API_KEY=your-pinecone-key
 PINECONE_INDEX=your-index-name
 
 5. 📄 Add your FAQ document
+```bash
 Put your (English) FAQ as data/weimaraner_faq.docx.
 
 6. 🚦 Run the bot
-
+```bash
 python bot.py
+
 On first run, the FAQ will be split, indexed, and uploaded to Pinecone.
 
 Bot will start polling for messages in Telegram.
@@ -98,8 +101,10 @@ English system prompt:
 Italian system prompt:
 “Sei un esperto cinofilo madrelingua italiano. Rispondi SOLO in italiano naturale, corretto e professionale, evitando calchi o traduzioni letterali da altre lingue. Se non sai la risposta dal contesto, scrivi semplicemente che non lo sai.”
 
-📚 License
-MIT License
+   📚 License
+
+[MIT License](LICENSE)
+
 
 🚀 Author
 Margarita Viviers
