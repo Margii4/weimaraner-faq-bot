@@ -51,23 +51,32 @@ Built to answer user questions about the Weimaraner dog breed with reliable, fac
 venv\Scripts\activate
 # For Linux/macOS:
 source venv/bin/activate
+
 ---
+
 3. **Install dependencies**
-```bash
-pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
+
 ---
+
 4. **Set up environment variables**
- ```env
-TELEGRAM_BOT_TOKEN=your-telegram-token
-OPENAI_API_KEY=your-openai-key
-PINECONE_API_KEY=your-pinecone-key
-PINECONE_INDEX=your-index-name
+   ```bash
+   TELEGRAM_BOT_TOKEN=your-telegram-token
+   OPENAI_API_KEY=your-openai-key
+   PINECONE_API_KEY=your-pinecone-key
+   PINECONE_INDEX=your-index-name
+
 ---
+
 5. **Add your FAQ document**
 Put your (English) FAQ as data/weimaraner_faq.docx.
+
 ---
+
 6. **Run the bot**
 python bot.py
+
 ---
 
 
