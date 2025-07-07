@@ -37,7 +37,7 @@ Built to answer user questions about the Weimaraner dog breed with reliable, fac
 ![Q&A in English](qa_english.png)
 
 ### Example Q&A (Italian)
-![Q&A in Italian](italian.png)
+![Q&A in Italian](qa_italian.png)
 
 ### User Query History (“Resents”)
 ![Recent questions history](resents_history.png)
