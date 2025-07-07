@@ -1,0 +1,11 @@
+langchain
+langchain-openai
+langchain-pinecone
+openai
+aiogram
+python-dotenv
+loguru
+tiktoken
+python-docx
+pinecone-client
+docx2txt
