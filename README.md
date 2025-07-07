@@ -53,9 +53,12 @@ venv\Scripts\activate
 source venv/bin/activate
 
 3. **Install dependencies**
-  pip install -r requirements.txt
+```bash
+pip install -r requirements.txt
+
 
 4. **Set up environment variables**
+env
 TELEGRAM_BOT_TOKEN=your-telegram-token
 OPENAI_API_KEY=your-openai-key
 PINECONE_API_KEY=your-pinecone-key
@@ -66,6 +69,7 @@ PINECONE_INDEX=your-index-name
 Put your (English) FAQ as data/weimaraner_faq.docx.
 
 6. **Run the bot**
+bash
 python bot.py
 
 On first run, the FAQ will be split, indexed, and uploaded to Pinecone.
