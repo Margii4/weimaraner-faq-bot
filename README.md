@@ -52,13 +52,13 @@ python -m venv venv
 venv\Scripts\activate
 # Linux/macOS:
 source venv/bin/activate
-
+```
 3. 📦 Install dependencies
-```
-pip install -r requirements.txt
 
-4. 🗝️ Prepare your environment variables
+pip install -r requirements.txt
 ```
+4. 🗝️ Prepare your environment variables
+
 Create a .env file in the project root:
 
 TELEGRAM_BOT_TOKEN=your-telegram-token
