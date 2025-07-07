@@ -42,6 +42,7 @@ Built to answer user questions about the Weimaraner dog breed with reliable, fac
 - 📝 JSON — Persistent storage of user history.
 - 📦 requirements.txt — Easy dependency management.
 
+---
 
 # 🚀 Getting Started
 
