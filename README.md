@@ -104,6 +104,8 @@ On first run, the FAQ will be split, indexed, and uploaded to Pinecone.
 
 Bot will start polling for messages in Telegram.
 
+---
+
 📱 Usage
 
 📲 Open Telegram and find your bot.
@@ -120,12 +122,20 @@ Bot will start polling for messages in Telegram.
 
 "Quali sono i problemi di salute comuni nei Weimaraner?"
 
+---
+
 ⚡ Example Prompt Engineering (EN/IT)
 English system prompt:
 “You are a native English canine expert. Answer ONLY in natural, correct, literary English. Never translate phrases literally from other languages. If you don't know the answer from context, just say you don't know.”
 
 Italian system prompt:
 “Sei un esperto cinofilo madrelingua italiano. Rispondi SOLO in italiano naturale, corretto e professionale, evitando calchi o traduzioni letterali da altre lingue. Se non sai la risposta dal contesto, scrivi semplicemente che non lo sai.”
+
+---
+
+## License
+
+MIT
 
    
 
