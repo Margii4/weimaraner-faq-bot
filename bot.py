@@ -46,14 +46,16 @@ openai_client = openai.AsyncOpenAI(api_key=OPENAI_API_KEY)
 
 SYSTEM_PROMPT = {
     "en": (
-        "You are a native English canine expert. Answer ONLY in natural, correct, "
-        "literary English. Never translate phrases literally from other languages. "
-        "If you don't know the answer from context, just say you don't know."
+        "You are an expert in the Weimaraner breed. "
+        "Answer ONLY questions related to Weimaraners, using ONLY the facts provided in the context. "
+        "If the question is off-topic or there isn't enough context, just say you don't know. "
+        "Assume any follow-up question is still about the Weimaraner unless the user explicitly changes the breed or topic."
     ),
     "it": (
-        "Sei un esperto cinofilo madrelingua italiano. Rispondi SOLO in italiano naturale, "
-        "corretto e professionale, evitando calchi o traduzioni letterali da altre lingue. "
-        "Se non sai la risposta dal contesto, scrivi semplicemente che non lo sai."
+        "Sei un esperto della razza Weimaraner. "
+        "Rispondi SOLO a domande relative ai Weimaraner, utilizzando SOLO i fatti forniti nel contesto. "
+        "Se la domanda non è pertinente o non c'è abbastanza contesto, scrivi semplicemente che non lo sai. "
+        "Considera ogni domanda successiva come riferita ancora ai Weimaraner, a meno che l'utente non cambi esplicitamente argomento o razza."
     )
 }
 
@@ -83,7 +85,6 @@ async def process_message(msg: types.Message, vector_store):
         if not history:
             await msg.answer("History is empty.", reply_markup=kb)
         else:
-            
             history_text = "\n\n".join(
                 [f"*Q:* {q}\n*A:* {a}" for q, a in history[-MAX_HISTORY:]]
             )
@@ -92,24 +93,45 @@ async def process_message(msg: types.Message, vector_store):
 
     logger.info(f"Query from user {msg.from_user.id} ({lang}): {text}")
 
-    results = vector_store.similarity_search(text, k=3)
-    context = "\n---\n".join([r.page_content for r in results])
+    history = user_history.get(user_id, [])
+    previous_q1 = history[-1][0] if len(history) > 0 else ""
+    previous_q2 = history[-2][0] if len(history) > 1 else ""
+
+    search_query = " ".join(q for q in [previous_q2, previous_q1, text] if q and q.strip().lower() not in ["resents", "clear memory", "english", "italiano"])
+
+    results_with_score = vector_store.similarity_search_with_score(search_query, k=3)
+    filtered = [doc for doc, score in results_with_score if score > 0.3]
+
+    if not filtered:
+        fallback_text = {
+            "en": "Sorry, I can only answer questions related to the Weimaraner breed.",
+            "it": "Mi dispiace, posso rispondere solo a domande relative alla razza Weimaraner."
+        }
+        await msg.answer(fallback_text[lang], reply_markup=kb)
+        return
+
+    context = "\n---\n".join([doc.page_content for doc in filtered])
 
     if lang == "it":
         prompt = (
-            "Rispondi come un esperto cinofilo madrelingua italiano. "
-            "Usa solo i fatti dal contesto sottostante, senza mai tradurre letteralmente o usare parole di altre lingue. "
-            "Adatta il testo a uno stile professionale e naturale per un lettore italiano. "
+            "Rispondi esclusivamente a domande relative alla razza Weimaraner, "
+            "utilizzando solo i fatti contenuti nel contesto fornito. "
+            "Se la domanda non è pertinente o non c'è abbastanza contesto, "
+            "scrivi semplicemente che non lo sai.\n\n"
+            f"Domande recenti dell'utente: {previous_q2} {previous_q1}\n"
+            f"Domanda attuale: {text}\n"
             f"Contesto: {context}\n"
-            f"Domanda: {text}\n"
             "Risposta:"
         )
     else:
         prompt = (
-            "Answer as a native English canine expert. Use ONLY facts from the context below. "
-            "Do not translate literally from other languages. Write in natural, professional, literary English. "
+            "Answer ONLY questions related to the Weimaraner breed, "
+            "using ONLY the facts provided in the context below. "
+            "If the question is off-topic or there isn't enough context, "
+            "just say you don't know.\n\n"
+            f"User's recent questions: {previous_q2} {previous_q1}\n"
+            f"Current question: {text}\n"
             f"Context: {context}\n"
-            f"Question: {text}\n"
             "Answer:"
         )
 
