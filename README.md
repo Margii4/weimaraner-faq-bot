@@ -30,7 +30,7 @@ Built to answer user questions about the Weimaraner dog breed with reliable, fac
 
  📸 **Screenshots**
 
-| Main menu | QA English | QA Italian | Resents History |
+| Main menu | QA English | QA Italian | Recents History |
 |---|---|---|---|
 | ![main](main_menu.png) | ![qa_english](qa_english.png) | ![qa_italian](qa_italian.png) | ![recents](recents_history.png) | g)
 
