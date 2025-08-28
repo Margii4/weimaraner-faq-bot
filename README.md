@@ -1,4 +1,4 @@
- 🐶 AI FAQ Telegram Bot for the Weimaraner Breed
+# 🐶 AI FAQ Telegram Bot for the Weimaraner Breed
 
  The bot is available while my script is running. If you cannot get a response, please contact me to schedule a demo.
 
@@ -32,7 +32,7 @@ Built to answer user questions about the Weimaraner dog breed with reliable, fac
 
 | Main menu | QA English | QA Italian | Resents History |
 |---|---|---|---|
-| ![main](main_menu.png) | ![qa_english](qa_english.png) | ![qa_italian](qa_italian.png) | ![resents](resents_history.png) | g)
+| ![main](main_menu.png) | ![qa_english](qa_english.png) | ![qa_italian](qa_italian.png) | ![recents](recents_history.png) | g)
 
 
 ---
